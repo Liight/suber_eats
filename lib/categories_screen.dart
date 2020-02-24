@@ -4,7 +4,7 @@ import './dummy_data.dart';
 import './category_item.dart';
 
 class CategoriesScreen extends StatelessWidget {
-  const CategoriesScreen({Key key}) : super(key: key);
+  // const CategoriesScreen({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +13,7 @@ class CategoriesScreen extends StatelessWidget {
         title: const Text('SuberEats'),
       ),
       body: GridView(
+        padding: EdgeInsets.all(25),
         children: DUMMY_CATEGORIES
             .map((element) => CategoryItem(element.title, element.color))
             .toList(),
