@@ -13,19 +13,11 @@ class CategoryItem extends StatelessWidget {
   // Create CategoryMealsScreen and push onto the navigation stack
   void selectCategory(BuildContext ctx) {
     Navigator.of(ctx).pushNamed(
-      '/categories',
+      CategoryMealsScreen.routeName,
       arguments: {
         'id': id,
         'title': title,
       },
-      // MaterialPageRoute(
-      //   builder: (_) {
-      //     return CategoryMealsScreen(
-      //       id,
-      //       title,
-      //     );
-      //   },
-      // ),
     );
   }
 

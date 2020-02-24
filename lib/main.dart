@@ -1,10 +1,13 @@
+// flutter
 import 'package:flutter/material.dart';
 import './category_meals_screen.dart';
-
+// custom
 import './categories_screen.dart';
 
+// run app
 void main() => runApp(MyApp());
 
+// app class
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -28,10 +31,12 @@ class MyApp extends StatelessWidget {
               ),
             ),
       ),
-      home: CategoriesScreen(),
-       routes: {
-         '/categories': (ctx) => CategoryMealsScreen(),
-       },
+      initialRoute: '/',
+      routes: {
+        '/': (ctx) => CategoriesScreen(),
+        CategoryMealsScreen.routeName: (ctx) =>
+            CategoryMealsScreen(), // routeName set in CategoryMealsScreen to avoid typos
+      },
     );
   }
 }
