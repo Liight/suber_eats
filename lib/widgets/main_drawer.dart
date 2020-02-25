@@ -1,10 +1,13 @@
 // flutter
 import 'package:flutter/material.dart';
+// custom
+import '../screens/filters_screen.dart';
 
 class MainDrawer extends StatelessWidget {
   const MainDrawer({Key key}) : super(key: key);
 
-  Widget buildListTile(String title, IconData icon, TextStyle textStyle) {
+  Widget buildListTile(
+      String title, IconData icon, TextStyle textStyle, Function tapHandler) {
     return ListTile(
       leading: Icon(
         icon,
@@ -14,7 +17,7 @@ class MainDrawer extends StatelessWidget {
         title,
         style: textStyle,
       ),
-      onTap: () {},
+      onTap: tapHandler,
     );
   }
 
@@ -50,6 +53,9 @@ class MainDrawer extends StatelessWidget {
                 fontSize: 30,
                 color: Theme.of(context).primaryColor,
               ),
+              () {
+                Navigator.of(context).pushNamed('/');
+              },
             ),
             buildListTile(
               'Filters',
@@ -59,6 +65,9 @@ class MainDrawer extends StatelessWidget {
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
+              () {
+                Navigator.of(context).pushNamed(FiltersScreen.routeName);
+              },
             ),
           ],
         ),

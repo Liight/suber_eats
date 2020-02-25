@@ -1,12 +1,11 @@
 // flutter
 import 'package:flutter/material.dart';
-import 'package:suber_eats/screens/tabs_screen.dart';
-
 // custom
 import './screens/categories_screen.dart';
 import './screens/meal_detail_screen.dart';
 import './screens/category_meals_screen.dart';
 import './screens/tabs_screen.dart';
+import './screens/filters_screen.dart';
 
 // run app
 void main() => runApp(MyApp());
@@ -41,6 +40,7 @@ class MyApp extends StatelessWidget {
         '/': (ctx) => TabsScreen(),
         CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
         MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
+        FiltersScreen.routeName: (ctx) => FiltersScreen(),
       },
       // Load this route for any named route that is not registered above
       onGenerateRoute: (settings){
