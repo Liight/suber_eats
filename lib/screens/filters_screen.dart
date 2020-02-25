@@ -1,5 +1,7 @@
 // flutter
 import 'package:flutter/material.dart';
+// custom
+import '../widgets/main_drawer.dart';
 
 class FiltersScreen extends StatelessWidget {
   const FiltersScreen({Key key}) : super(key: key);
@@ -7,8 +9,12 @@ class FiltersScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('Filters'),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Filters'),
+      ),
+      drawer: MainDrawer(),
+      body: Center(child: Text('Filters')),
     );
   }
 }

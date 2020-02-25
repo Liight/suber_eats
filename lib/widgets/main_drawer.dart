@@ -54,7 +54,7 @@ class MainDrawer extends StatelessWidget {
                 color: Theme.of(context).primaryColor,
               ),
               () {
-                Navigator.of(context).pushNamed('/');
+                Navigator.of(context).pushReplacementNamed('/');
               },
             ),
             buildListTile(
@@ -66,7 +66,7 @@ class MainDrawer extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
               () {
-                Navigator.of(context).pushNamed(FiltersScreen.routeName);
+                Navigator.of(context).pushReplacementNamed(FiltersScreen.routeName);
               },
             ),
           ],
