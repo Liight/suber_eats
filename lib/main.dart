@@ -1,8 +1,10 @@
 // flutter
 import 'package:flutter/material.dart';
-import './screens/category_meals_screen.dart';
+
 // custom
 import './screens/categories_screen.dart';
+import './screens/meal_detail_screen.dart';
+import './screens/category_meals_screen.dart';
 
 // run app
 void main() => runApp(MyApp());
@@ -33,9 +35,10 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
+        // routeNames set within screens to avoid typos
         '/': (ctx) => CategoriesScreen(),
-        CategoryMealsScreen.routeName: (ctx) =>
-            CategoryMealsScreen(), // routeName set in CategoryMealsScreen to avoid typos
+        CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
+        MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
       },
     );
   }
