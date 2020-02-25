@@ -11,7 +11,6 @@ class MealItem extends StatelessWidget {
   final int duration;
   final Complexity complexity;
   final Affordability affordability;
-  final Function removeItem;
 
   const MealItem({
     Key key,
@@ -21,7 +20,6 @@ class MealItem extends StatelessWidget {
     @required this.duration,
     @required this.complexity,
     @required this.affordability,
-    @required this.removeItem,
   }) : super(key: key);
 
   String get complexityText {
@@ -66,7 +64,7 @@ class MealItem extends StatelessWidget {
               // This function executes once the page at the named route is popped
               // essentially this serves as onPop for the provided page route
               if(result != null){
-                removeItem(result)
+                // ...
               }
             });
   }
